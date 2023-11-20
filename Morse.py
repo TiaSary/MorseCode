@@ -18,4 +18,6 @@ def text_to_morse(text):
     return morse_code
 
 
-
+text = input("Enter text to convert to Morse Code: ")
+morse_code = text_to_morse(text)
+print("Morse Code: ", morse_code)
