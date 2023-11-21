@@ -7,7 +7,9 @@ ttm = {'A' : '.-', 'B' : '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.',
        'e': '.', 'f': '..-.', 'g': '--.', 'h': '....', 'i': '..', 'j': '.---', 
        'k': '-.-', 'l': '.-..', 'm': '--', 'n': '-.', 'o': '---', 'p': '.--.', 
        'q': '--.-', 'r': '.-.', 's': '...', 't': '-', 'u': '..-', 'v': '...-', 
-       'w': '.--', 'x': '-..-', 'y': '-.--', 'z': '--..', ' ' : '|'}
+       'w': '.--', 'x': '-..-', 'y': '-.--', 'z': '--..', ' ' : '|', '0': '-----', 
+       '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', 
+       '7': '--...', '8': '---..', '9': '----.',}
 
 
 
@@ -16,7 +18,9 @@ mtt = {'.-': 'a', '-...': 'b', '-.-.': 'c', '-..': 'd', '.': 'e', '..-.': 'f',
        '--.': 'g', '....': 'h', '..': 'i', '.---': 'j', '-.-': 'k', '.-..': 'l', 
        '--': 'm', '-.': 'n', '---': 'o', '.--.': 'p', '--.-': 'q', '.-.': 'r', 
        '...': 's', '-': 't', '..-': 'u', '...-': 'v', '.--': 'w', '-..-': 'x', 
-       '-.--': 'y', '--..': 'z',  "|" : " "}
+       '-.--': 'y', '--..': 'z',  "|" : " ", '-----': '0', '.----': '1', '..---': '2', 
+       '...--': '3', '....-': '4', '.....': '5', '-....': '6', '--...': '7', '---..': '8', 
+       '----.': '9',}
 
 
 
@@ -51,14 +55,22 @@ while True:
     mode = input().upper()
 
     if mode == "E":
-        # Execution of text to morse function
+        # Encryption
+        print('Encryption mode entered.')
+        print('You may only enter english letters and numbers, characters that are not english letters or numbers will be returned as "#".')
+        print('The encrypted words will be separated using "|".')
         text = input("Enter text to encrypt to Morse Code: ")
+
         morse_code = text_to_morse(text)
         print("Morse Code: ", morse_code)
 
     elif mode == "D":
-        # Execution for morse to text function
-        morse_code = input("Enter Morse Code to decrypt to text")
+        # Decryption
+        print('Decryption mode entered. ')
+        print('Unknown or invalid characters will be returned as "#", a "."(fullstop) is unrecognised and will be returned as an "e". ')
+        print('Seperate your morse characters by using " "(space), seperate your words by using " | "(space, shift + backslash, space). ')
+
+        morse_code = input("Enter Morse Code to decrypt to text: ")
         text = morse_to_text(morse_code)
         print("Text = ", text.strip())
 
