@@ -43,48 +43,31 @@ def morse_to_text(morse_code):
 
 
 
-# Execution of text to morse function
-text = input("Enter text to encrypt to Morse Code: ")
-morse_code = text_to_morse(text)
-print("Morse Code: ", morse_code)
-
-
-
-# Execution for morse to text function
-morse_code = input("Enter Morse Code to decrypt to text: ")
-text = morse_to_text(morse_code)
-print("Text = ", text)
-
-
-
-
-
-
-
-
-
-"""# Application
+# Application
 print("This application has been designed to encypt your text to Morse Code, and decrypt your Morse Code to text.")
-print('Enter "E" to encrypt, "D" to decrypt, and "Q" to quit the application.')
-mode = input()
-"""
-"""if mode == "e" or "E":
-    # Execution of text to morse function
-    text = input("Enter text to encrypt to Morse Code: ")
-    morse_code = text_to_morse(text)
-    print("Morse Code: ", morse_code)
 
-elif mode == "D" or "d":
-    # Execution for morse to text function
-    morse_code = input("Enter Morse Code to decrypt to text")
-    text = morse_to_text(morse_code)
-    print("Text = ", text.strip())
+while True:
+    print('Enter "E" to encrypt, "D" to decrypt, and "Q" to quit the application.')
+    mode = input().upper()
 
-elif mode == "Q" or "q":
-    print("Quitting the application")
+    if mode == "E":
+        # Execution of text to morse function
+        text = input("Enter text to encrypt to Morse Code: ")
+        morse_code = text_to_morse(text)
+        print("Morse Code: ", morse_code)
 
-else:
-    print("Please enter a valid response.")"""
+    elif mode == "D":
+        # Execution for morse to text function
+        morse_code = input("Enter Morse Code to decrypt to text")
+        text = morse_to_text(morse_code)
+        print("Text = ", text.strip())
+
+    elif mode == "Q":
+        print("Quitting the application")
+        break
+
+    else:
+        print("Please enter a valid response.")
 
 
 
