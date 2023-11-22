@@ -47,39 +47,44 @@ def morse_to_text(morse_code):
 
 
 
-# Application
-print("This application has been designed to encypt your text to Morse Code, and decrypt your Morse Code to text.")
+if __name__ == '__main__': 
+    # Application
+    print("This application has been designed to encypt your text to Morse Code, and decrypt your Morse Code to text.")
 
-while True:
-    print('Enter "E" to encrypt, "D" to decrypt, and "Q" to quit the application.')
-    mode = input().upper()
+    while True:
+        print('Enter "E" to encrypt, "D" to decrypt, and "Q" to quit the application.')
+        mode = input().upper()
 
-    if mode == "E":
-        # Encryption
-        print('Encryption mode entered.')
-        print('You may only enter english letters and numbers, characters that are not english letters or numbers will be returned as "#".')
-        print('The encrypted words will be separated using "|".')
-        text = input("Enter text to encrypt to Morse Code: ")
 
-        morse_code = text_to_morse(text)
-        print("Morse Code: ", morse_code)
+        if mode == "E":
+            # Encryption
+            print('Encryption mode entered.')
+            print('You may only enter english letters and numbers, characters that are not english letters or numbers will be returned as "#".')
+            print('The encrypted words will be separated using "|".')
+            text = input("Enter text to encrypt to Morse Code: ")
 
-    elif mode == "D":
-        # Decryption
-        print('Decryption mode entered. ')
-        print('Unknown or invalid characters will be returned as "#", a "."(fullstop) is unrecognised and will be returned as an "e". ')
-        print('Seperate your morse characters by using " "(space), seperate your words by using " | "(space, shift + backslash, space). ')
+            morse_code = text_to_morse(text)
+            print("Morse Code: ", morse_code)
 
-        morse_code = input("Enter Morse Code to decrypt to text: ")
-        text = morse_to_text(morse_code)
-        print("Text = ", text.strip())
 
-    elif mode == "Q":
-        print("Quitting the application")
-        break
+        elif mode == "D":
+            # Decryption
+            print('Decryption mode entered. ')
+            print('Unknown or invalid characters will be returned as "#", a "."(fullstop) is unrecognised and will be returned as an "e". ')
+            print('Seperate your morse characters by using " "(space), seperate your words by using " | "(space, shift + backslash, space). ')
 
-    else:
-        print("Please enter a valid response.")
+            morse_code = input("Enter Morse Code to decrypt to text: ")
+            text = morse_to_text(morse_code)
+            print("Text = ", text.strip())
+
+
+        elif mode == "Q":
+            print("Quitting the application")
+            break
+
+
+        else:
+            print("Please enter a valid response.")
 
 
 
