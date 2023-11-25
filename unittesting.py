@@ -16,8 +16,9 @@ class TestMorseCode(unittest.TestCase):
     def test_invalid_morse_to_text(self):
         self.assertEqual(Morse.morse_to_text("---. -.-.-.--.-. -....-"), "###")
 
-
-
+    def test_encryption_insensitive(self):
+        self.assertEqual(Morse.text_to_morse("hello"), ".... . .-.. .-.. ---")
+        self.assertEqual(Morse.text_to_morse("HEllo"), ".... . .-.. .-.. ---")
 
 
 
