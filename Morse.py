@@ -33,7 +33,7 @@ def valid_text(input_text):
 
 # Define a function to check if the input Morse code contains valid characters
 def valid_morse(input_morse):
-    valid_morse_characters = set(".-|")
+    valid_morse_characters = set(".-| ")
     return all(char in valid_morse_characters for char in input_morse)
 
 
