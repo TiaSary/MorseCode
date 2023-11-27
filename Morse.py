@@ -106,8 +106,8 @@ if __name__ == '__main__':
         elif mode == "D":
             # Decryption
             print('Decryption mode entered. ')
-            print('Unknown or invalid characters will be returned as "#", a "."(fullstop) is unrecognised and will be returned as an "e". ')
-            print('Seperate your morse characters by using " "(space), seperate your words by using " | "(space, shift + backslash, space). ')
+            print('Unknown or invalid characters will be returned as "#", a "."(full stop) is unrecognised and will be returned as an "e". ')
+            print('Separate your morse characters by using " "(space), separate your words by using " | "(space, shift + backslash, space). ')
             
             morse_code = valid_morse_input()
             text = morse_to_text(morse_code)
